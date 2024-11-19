@@ -1,0 +1,32 @@
+{
+  "name": "result",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "prod": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisarazum/result.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisarazum/result/issues"
+  },
+  "homepage": "https://github.com/lisarazum/result#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.1",
+    "rollup-plugin-server": "^0.7.0",
+    "rollup-plugin-styles": "^4.0.0"
+  }
+}

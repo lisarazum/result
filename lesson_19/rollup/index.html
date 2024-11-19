@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    Инициализация проекта
+    <br>
+    Перед началом работы инициализируем проект. Для этого откроем терминал в Visual Studio Code через меню View > Terminal и выполним следующую команду:
+    <br>
+    npm init -y
+    <br>
+    package.json — это файл конфигурации проекта, который применяется npm для управления настройками проекта и пакетами приложения. Пока можем оставить настройки в этом файле по умолчанию.
+    <br>
+    index.js - Напишем в index.js простой код для тестирования сборки:
+    <br>
+    Установим сборщик Rollup с помощью следующей команды: npm install --global rollup
+    <br>
+    <br>
+    После этого создадим файл конфигурации Rollup rollup.config.mjs (именно .mjs):
+    <pre>
+      export default {
+        input: './index.js',
+        output: {
+          file: './build/bundle.js',
+          format: 'cjs'
+        }
+      };
+    </pre>
+    <br>
+    Описание настроек:
+    <br>
+    input – входной файл, указываем путь к основному JS-файлу
+
+    <br>
+    output:
+    <br>
+    file – выходной файл, куда будут собраны все файлы проекта
+    <br>
+    format – формат сборки, по умолчанию это "cjs" (CommonJS).
+    <br>
+    Точка и слэш ./ в пути к файлу означают текущую дерикторию с файлом (в данном случае директорию файла rollup.config.mjs, корневую директорию проекта).
+    <br>
+    Более подробное описание настроек можно найти в документации Rollup.
+    <br>
+    <br>
+    Сборка проекта
+
+Чтобы собрать проект с помощью Rollup, достаточно запустить в терминале команду сборки с текущей конфигурацией: rollup -c
+    <br>
+    <br>
+    <br>
+  </div>
+  <script src="dist/bundle.js"></script>
+</body>
+</html>
